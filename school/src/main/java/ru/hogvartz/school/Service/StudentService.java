@@ -29,6 +29,10 @@ public class StudentService {
         return studentRepository.findById(id).get();
     }
 
+    public Collection<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
+
     public Student updateStudent(Student student) {
         return studentRepository.save(student);
     }

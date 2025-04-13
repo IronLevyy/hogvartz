@@ -23,6 +23,11 @@ public class StudentController {
         return studentService.getStudent(id);
     }
 
+    @GetMapping("/all")
+    public Collection<Student> getAllStudents() {
+        return studentService.getAllStudents();
+    }
+
     @GetMapping("filter/{age}")
     public Collection<Student> getStudentsForAge(@PathVariable int age) {
         return studentService.getStudentsForAge(age);
